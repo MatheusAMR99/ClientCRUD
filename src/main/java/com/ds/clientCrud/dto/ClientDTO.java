@@ -3,6 +3,7 @@ package com.ds.clientCrud.dto;
 import com.ds.clientCrud.entities.Client;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Pattern;
 
 import java.time.LocalDate;
 
@@ -15,6 +16,9 @@ public class ClientDTO {
     @PastOrPresent(message = "não pode ser data futura")
     private LocalDate birthDate;
     private Integer children;
+
+    public ClientDTO() {
+    }
 
     public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
@@ -38,7 +42,7 @@ public class ClientDTO {
         return id;
     }
 
-    public @NotBlank(message = "não pode ser vazio") String getName() {
+    public String getName() {
         return name;
     }
 
@@ -50,7 +54,7 @@ public class ClientDTO {
         return income;
     }
 
-    public @PastOrPresent(message = "não pode ser data futura") LocalDate getBirthDate() {
+    public  LocalDate getBirthDate() {
         return birthDate;
     }
 
