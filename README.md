@@ -24,6 +24,7 @@ O sistema utiliza banco de dados em memória H2, Maven como gerenciador de depen
 - H2 Database
 - Maven
 - Bean Validation
+
 📫 Como executar
 - Clone o repositório
 - Importe na sua IDE (IntelliJ / Eclipse)
